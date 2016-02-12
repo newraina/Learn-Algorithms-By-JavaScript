@@ -1,3 +1,3 @@
 var expect = require('chai').expect;
 
-require('../1 - basic/test/test');
+require('../1-basic/test/test');
