@@ -34,6 +34,8 @@ Stack.prototype.push = function (item) {
 
 // 从栈顶删除元素
 Stack.prototype.pop = function () {
+    if(this.isEmpty()) return;
+
     var item   = this.first.item;
     this.first = this.first.next;
     this.n--;
