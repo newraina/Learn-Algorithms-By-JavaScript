@@ -48,7 +48,4 @@ Queue.prototype.dequeue = function () {
     return item;
 };
 
-//var a = new Queue();
-//a.enqueue(1);
-//console.dir(a);
 module.exports = Queue;
