@@ -52,6 +52,6 @@ let Bag = (function () {
     }
 
     return Bag;
-})();
+}());
 
 module.exports = Bag;

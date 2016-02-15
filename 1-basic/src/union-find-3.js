@@ -36,18 +36,18 @@ let UF = (function () {
         }
 
         union(p, q) {
-            let pID = this.find(p);
-            let qID = this.find(q);
-            let id  = this[_id];
+            let pRoot = this.find(p);
+            let qRoot = this.find(q);
+            let id    = this[_id];
 
-            if (pID === qID) return;
+            if (pRoot === qRoot) return;
 
-            if(id[pID].size < id[qID].size) {
-                id[pID].root = qID;
-                id[qID].size += id[pID].size;
+            if (id[pRoot].size < id[qRoot].size) {
+                id[pRoot].root = qRoot;
+                id[qRoot].size += id[pRoot].size;
             } else {
-                id[qID].root = pID;
-                id[pID].size += id[qID].size;
+                id[qRoot].root = pRoot;
+                id[pRoot].size += id[qRoot].size;
             }
 
             this[_count]--;
@@ -55,4 +55,4 @@ let UF = (function () {
     }
 
     return UF;
-})();
+}());

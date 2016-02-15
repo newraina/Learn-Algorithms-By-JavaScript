@@ -50,4 +50,4 @@ let UF = (function () {
     }
 
     return UF;
-})();
+}());
