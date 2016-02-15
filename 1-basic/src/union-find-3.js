@@ -4,8 +4,6 @@
  * 动态连通性问题， 第三版
  */
 
-let fs = require('fs');
-
 let UF = (function () {
     let _count = Symbol();
     let _id    = Symbol();

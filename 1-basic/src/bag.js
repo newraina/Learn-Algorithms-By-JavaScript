@@ -1,6 +1,5 @@
 "use strict";
 
-var Node  = require('./node');
 let Stack = require('./stack');
 
 /**
