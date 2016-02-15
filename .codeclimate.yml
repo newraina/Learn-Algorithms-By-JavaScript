@@ -38,7 +38,7 @@ env:
 # http://eslint.org/docs/rules/
 rules:
   # me
-  "wrap-iife": [2, "any"]
+  wrap-iife: [2, "any"]
   # Possible Errors
   comma-dangle: [2, never]
   no-cond-assign: 2
@@ -124,7 +124,6 @@ rules:
   no-with: 2
   radix: 2
   vars-on-top: 0
-  wrap-iife: 2
   yoda: 0
 
   # Strict
