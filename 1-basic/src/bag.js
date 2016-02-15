@@ -17,7 +17,6 @@ let Bag = (function () {
         constructor() {
             this[n]       = 0;
             this[first]   = null;
-            this[current] = null;
         }
 
         add(item) {
@@ -37,7 +36,7 @@ let Bag = (function () {
         }
 
         hasNext() {
-            if (!this[current]) {
+            if (this[current] === undefined) {
                 this[current] = this[first];
             }
             return this[current] !== null;
