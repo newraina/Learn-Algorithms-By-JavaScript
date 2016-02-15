@@ -50,7 +50,7 @@ let Bag = (function () {
         }
     }
 
-    return Bag();
-}());
+    return Bag;
+})();
 
 module.exports = Bag;
