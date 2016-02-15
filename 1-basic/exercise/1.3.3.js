@@ -1,10 +1,10 @@
+"use strict";
+
 /**
  * 判断给定的数组序列是否可以还原成一系列的入栈出栈操作
  * 可以则输出具体步骤，否则输出错误信息
  * @param nums {number[]} 数字构成的数组
  */
-"use strict";
-
 function test(nums) {
     let max    = 0;
     let result = '开始！\n';
@@ -17,7 +17,6 @@ function test(nums) {
             }
             result += '出栈：' + nums[i] + '\n';
         }
-        //        result += nums[i] + ', ' + nums[i + 1]+ '\n';
         if (nums[i] > nums[i + 1]) {
             result += '出栈：' + nums[i + 1] + '\n';
         } else if (max < nums[i + 1]) {
