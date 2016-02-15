@@ -56,24 +56,3 @@ let UF = (function () {
 
     return UF;
 })();
-
-// 读取数据测试算法
-fs.readFile('mediumUF.txt', function (err, data) {
-    if (err) {
-        return console.error(err);
-    }
-
-    let lines  = data.toString().split('\n').map(function (value) {
-        return value.split(' ').map(Number);
-    });
-    let n      = lines[0];
-    let testUF = new UF(n);
-    let pre    = new Date();
-    for (let i = 1; i < lines.length; i++) {
-        let singleLine = lines[i];
-        if (singleLine.length === 2) {
-            testUF.union(singleLine[0], singleLine[1]);
-        }
-    }
-    console.log('用时：' + (new Date() - pre) + '毫秒');
-});

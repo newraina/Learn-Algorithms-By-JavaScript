@@ -37,6 +37,8 @@ env:
 
 # http://eslint.org/docs/rules/
 rules:
+  # me
+  "wrap-iife": [2, "any"]
   # Possible Errors
   comma-dangle: [2, never]
   no-cond-assign: 2
