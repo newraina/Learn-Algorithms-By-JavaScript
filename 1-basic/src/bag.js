@@ -1,6 +1,7 @@
 "use strict";
 
-var Node = require('./node');
+var Node  = require('./node');
+let Stack = require('./stack');
 
 /**
  * 背包的实现
@@ -9,35 +10,29 @@ var Node = require('./node');
  */
 
 let Bag = (function () {
-    let n       = Symbol();
-    let first   = Symbol();
     let current = Symbol();
+    let stack   = Symbol();
 
     class Bag {
         constructor() {
-            this[n]       = 0;
-            this[first]   = null;
+            this[stack] = new Stack();
         }
 
         add(item) {
-            var oldFirst     = this[first];
-            this[first]      = new Node();
-            this[first].item = item;
-            this[first].next = oldFirst;
-            this[n]++;
+            this[stack].push(item);
         }
 
         isEmpty() {
-            return this[n] === 0;
+            return this[stack].isEmpty();
         }
 
         size() {
-            return this[n];
+            return this[stack].size();
         }
 
         hasNext() {
             if (this[current] === undefined) {
-                this[current] = this[first];
+                this[current] = this[stack].first;
             }
             return this[current] !== null;
         }
